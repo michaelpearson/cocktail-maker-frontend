@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import counter from './counter'
+import ingredients from './ingredients'
 
 const cocktailMakerApp = combineReducers({
-  counter
+  ingredients
 });
 
 

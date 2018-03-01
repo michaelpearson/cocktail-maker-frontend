@@ -1,36 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import Button from './Button'
-import { increment, decrement, autoIncrement } from "../actions/index";
+import IngredientContainer from "../containers/IngredientContainer";
 
 class App extends Component {
-
-  increment() {
-    console.log('here');
-    this.props.increment();
-  }
 
   render() {
     return (
       <div>
-        <Button text='Increment' onClick={ this.props.increment } />
-        <Button text='Decrement' onClick={ this.props.decrement } />
-        <Button text='Auto Increment' onClick={ this.props.autoIncrement } />
-        <br />
-        <span>{ this.props.counter }</span>
+        <IngredientContainer />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-    counter: state.counter
-});
+const mapStateToProps = (state) => ({});
 
-const mapDispatcherToProps = {
-  increment,
-  decrement,
-  autoIncrement
-};
+const mapDispatcherToProps = {};
 
 export default connect(mapStateToProps, mapDispatcherToProps)(App);
